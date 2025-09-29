@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Download, ChevronDown } from 'lucide-react';
 import resumePdf from '@/assets/MD_AL_EMRAN_CV.pdf';
+import profileImage from '@/assets/portfolio_profile.JPG';
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
@@ -63,6 +64,27 @@ const HeroSection = ({ onNavigate }: HeroSectionProps) => {
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 My Resume
               </Button>
+            </div>
+          </div>
+
+          {/* Right Content - Profile Image */}
+          <div className="flex-1 flex justify-center lg:justify-end animate-fade-in-right">
+            <div className="relative">
+              <div className="profile-glow">
+                <img 
+                  src={profileImage} 
+                  alt="MD AL EMRAN - Profile"
+                  className="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/20"
+                />
+              </div>
+
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold animate-float">
+                🎓 Final Year
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-gradient-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-semibold animate-float" style={{ animationDelay: '1s' }}>
+                🚀 Data Science
+              </div>
             </div>
           </div>
 
