@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => ({
     strictPort: true,
   },
   plugins: [react()].filter(Boolean),
+  assetsInclude: ["**/*.JPG"],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
